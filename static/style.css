@@ -1,0 +1,157 @@
+body
+{
+    background-color: lightgrey;
+    font-family: 'Lato', sans-serif;
+}
+
+#container
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
+    height: 5300px;
+
+}
+
+#header
+{
+    width: 1398px;
+    height: 130px;
+    font-size: 100px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#inputBox
+{
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 500px;
+    height: 800px;
+    display: block;
+    float: left;
+}
+
+#between
+{
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 24px;
+    margin-top: 360px;
+    font-size: 50px;
+    height: 65px;
+    width: 150px;
+    float: left;
+    background-color: #4CAF50;
+    border-radius: 15px;
+}
+
+#between:hover
+{
+    cursor: pointer;
+}
+
+#txtArea
+{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: block;
+    resize: none;
+}
+
+
+#output
+{
+    margin-top: 10px;
+    background-color: white;
+    border: 1px black solid;
+    width: 500px;
+    height: 800px;
+    display: block;
+    float: left;
+}
+
+#outputArea
+{
+    margin-top: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 800px;
+    float: left;
+    display: block;
+    resize: none;
+    overflow-y: scroll;
+}
+
+#descriptionContainer
+{
+    margin-top: 40px;
+    width: 1400px;
+    height: 4280px;
+    border: 1px black solid;
+}
+
+#descriptionHeader
+{
+    width: 100%;
+    height: 150px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.description
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 70px;
+    font-size: 70px;
+    text-align: center;
+    display: block;
+}
+
+.screen1
+{
+    margin-top: 10px;
+    background-image: url("img/screen1.png");
+    width: 1219px;
+    height: 861px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.screen2
+{
+    background-image: url("img/screen2.png");
+    width: 1233px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.screen3
+{
+    background-image: url("img/screen3.png");
+    width: 1054px;
+    height: 624px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.screen4
+{
+    background-image: url("img/screen4.png");
+    width: 1237px;
+    height: 209px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.screen5
+{
+    background-image: url("img/screen5.png");
+    width: 1214px;
+    height: 851px;
+    margin-left: auto;
+    margin-right: auto;
+}
