@@ -22,6 +22,64 @@ body
     border: 1px solid black;
 }
 
+#headerChoice
+{
+    width: 1398px;
+    height: 100px;
+    font-size: 70px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#choiceContainer
+{
+    margin-top: 5px;
+    width: 1398px;
+    height: 100px;
+    border: 1px solid black;
+
+}
+
+.choiceButton
+{
+    margin-top: 5px;
+    display: block;
+    float: left;
+    width: 300px;
+    height: 90px;
+    border-radius: 15px;
+}
+
+.choiceButton:hover
+{
+    cursor: pointer;
+}
+
+#spotiButton
+{
+    margin-left: 100px;
+    background-color: #4CAF50;
+    text-align: center;
+    font-size: 34px;
+}
+
+#coinButton
+{
+    margin-left: 140px;
+    background-color: yellow;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+#bottleButton
+{
+    margin-left: 140px;
+    background-color: saddlebrown;
+    text-align: center;
+    font-size: 55px;
+}
+
 #inputBox
 {
     margin-top: 10px;
@@ -91,6 +149,7 @@ body
     width: 1400px;
     height: 4280px;
     border: 1px black solid;
+
 }
 
 #descriptionHeader
@@ -154,4 +213,130 @@ body
     height: 851px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#spotiPage
+{
+    display: none;
+}
+
+#coinPage
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    width: 1400px;
+    height: auto;
+    border: 1px solid black;
+}
+
+#coinGetAnswerButton
+{
+    width: 1000px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 80px;
+}
+
+#coinGetAnswerButton:hover
+{
+    cursor: pointer;
+}
+
+#coinOutputArea
+{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 200px;
+    width: 1000px;
+    height: 300px;
+    resize: none;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+#bottlePage
+{
+    display: block;
+    border: 1px solid black;
+    height: 800px;
+}
+
+#instructionsCoin
+{
+    margin-top: 10px;
+    width: 1400px;
+    height: 1500px;
+    border: 1px solid black;
+}
+
+#instructionCoinHeader
+{
+    width: 1398px;
+    height: 100px;
+    border: 1px black solid;
+    font-size: 80px;
+    text-align: center;
+
+}
+
+#coinInstructionText
+{
+    width: 1400px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#pytanieButton
+{
+    margin-top: 30px;
+    display: block;
+    width: 400px;
+    height: 150px;
+    background-color: seagreen;
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+    font-size: 65px;
+    border-radius: 10px;
+}
+
+#pytanieButton:hover
+{
+    cursor: pointer;
+}
+
+#wyzwanieButton
+{
+    margin-top: 30px;
+    display: block;
+    width: 400px;
+    height: 150px;
+    background-color: darkred;
+    float: left;
+    text-align: center;
+    margin-left: 380px;
+    font-size: 65px;
+    border-radius: 10px;
+}
+
+#wyzwanieButton:hover
+{
+    cursor: pointer;
+}
+
+#butelkaOutputArea
+{
+    margin-top: 50px;
+    margin-left: 280px;
+    width: 800px;
+    height: 400px;
+    resize: none;
+    font-size: 40px;
+    text-align: center;
 }
