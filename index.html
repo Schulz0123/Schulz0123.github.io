@@ -8,7 +8,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
+    <script id="lists">
+        let coin = ["test1", "test2", "test3", "test4", "test5", "test6"]
+        function getRandomCoinQuestion(){
+            let randomQuestion = coin[Math.floor(Math.random()*coin.length)]
+            document.getElementById("coinOutputArea").innerHTML = randomQuestion
+        }
+
+        let pytania = ["p1", "p2", "p3", "p4", "p5", "p6"]
+        let wyzwania = ["w1", "w2", "w3", "w4", "w5", "w6"]
+
+        function getRandomPytanie(){
+            let randomPytanie = pytania[Math.floor(Math.random()*pytania.length)]
+            document.getElementById("butelkaOutputArea").innerHTML = randomPytanie
+        }
+
+        function getRandomWyzwanie(){
+            let randomWyzwanie = wyzwania[Math.floor(Math.random()*wyzwania.length)]
+            document.getElementById("butelkaOutputArea").innerHTML = randomWyzwanie
+        }
+
+
+    </script>
+
     <script id="shuffle">
+
+
 
             function doit(){
             let array = []
@@ -44,17 +69,42 @@
 
         }
 
+        //////////////////////////////////////end of spoti shuffle/////
+            function revealSpotiPage(){
+                document.getElementById('spotiPage').style.display = "block"
+                document.getElementById('coinPage').style.display = "none"
+                document.getElementById('bottlePage').style.display = "none"
+            }
 
+            function revealCoinPage(){
+                document.getElementById('spotiPage').style.display = "none"
+                document.getElementById('coinPage').style.display = "block"
+                document.getElementById('bottlePage').style.display = "none"
+            }
 
+            function revealBottlePage(){
+                document.getElementById('spotiPage').style.display = "none"
+                document.getElementById('coinPage').style.display = "none"
+                document.getElementById('bottlePage').style.display = "block"
+            }
     </script>
+
 </head>
 
 <body>
 
     <div id="container">
-        <div id="header">SPOTIFY PLAYLIST SHUFFLER</div>
+        <div id="header">WSPANIAŁE MIEJSCE ZABAW</div>
+        <div id="headerChoice">WYBIERZ SWOJĄ ZABAWĘ:</div>
+
+        <div id="choiceContainer">
+            <div class="choiceButton" id="spotiButton" onclick="revealSpotiPage()"  >SPOTIFY PLAYLIST SHUFFLER </div>
+            <div class="choiceButton" id="coinButton" onclick="revealCoinPage()" >PIENIĄŻEK</div>
+            <div class="choiceButton" id="bottleButton" onclick="revealBottlePage()" >BUTELKA</div>
+        </div>
 
 
+    <div id="spotiPage">
         <div id="inputBox">
             <textarea id="txtArea"></textarea>
         </div>
@@ -66,24 +116,64 @@
 
         <div style="clear: both"></div>
 
-
-
         <div id="descriptionContainer">
-            <div id="descriptionHeader">HOW DOES IT WORK?</div>
-            <div class="description">1. Choose the playlist you want to shuffle</div>
-            <div class="screen1" ></div>
-            <div style="height: 150px !important;"  class="description">2. Select all songs using "Ctrl + A" and copy them by "Ctrl + C"</div>
-            <div class="screen2"></div>
-            <div style="height: 260px !important;"  class="description">3. Paste them into first text area <br> click the green button <br> copy the results</div>
-            <div class="screen3"></div>
-            <div class="description">4. delete actual content of the playlist</div>
-            <div class="screen4"></div>
-            <div class="description">5. paste the new content using "Ctrl + V"</div>
-            <div class="screen5"></div>
-
-
-
+            <div id="spoticontainer">
+                <div id="descriptionHeader">HOW DOES IT WORK?</div>
+                <div class="description">1. Choose the playlist you want to shuffle</div>
+                <div class="screen1" ></div>
+                <div style="height: 150px !important;"  class="description">2. Select all songs using "Ctrl + A" and copy them by "Ctrl + C"</div>
+                <div class="screen2"></div>
+                <div style="height: 260px !important;"  class="description">3. Paste them into first text area <br> click the green button <br> copy the results</div>
+                <div class="screen3"></div>
+                <div class="description">4. delete actual content of the playlist</div>
+                <div class="screen4"></div>
+                <div class="description">5. paste the new content using "Ctrl + V"</div>
+                <div class="screen5"></div>
+            </div>
         </div>
+    </div>
+
+        <div id="coinPage">
+            <div id="coinGetAnswerButton" onclick="getRandomCoinQuestion()">
+                LOSUJ PYTANIE
+            </div>
+            <div id="coinOutput">
+                <textarea id="coinOutputArea"></textarea>
+                <div id="instructionsCoin">
+                    <div id="instructionCoinHeader">INSTRUKCJA:</div>
+                    <div id="coinInstructionText">
+                        1. dowolna ilość osób zbiera się w koło <br> 2. osoba rozpoczynająca mówi osobie po swojej lewej / prawej pytanie, tak, żeby nikt inny tego nie słyszał poza nią
+                    <br><br> 3. osoba, która otrzymała pytanie, mówi na głos imie osoby z zebranego grona - która według niego najbardziej wpasowuje się w odpowiedź na pytanie
+                        <br><br>4. osoba odpowiadająca rzuca monetą - jeśli wypadna orzeł, to usłyszane pytanie musi powiedzieć na głos, aby każdy usłyszał
+                        <br> jeśli wypada reszka, to nie mówi pytania na głos, nikt go nie zna
+                    </div>
+                    <div id="instructionCoinHeader" STYLE="margin-top: 10px">PRZYKŁAD:</div>
+                    <div id="coinInstructionText" style="margin-top: 20px">
+                        1. kilka osób siada wokół stołu
+                        <br><br>
+                        2. osoba siedząca najbliżej wyjścia (nazwijmy ją osobą "A") zaczyna - szepce osobie po swojej lewej (osobie "B") pytanie:
+                        <br>
+                        "Kto z tu zebranych byłby najbardziej skłonny do dołączenia do sekty?"
+                        <br><br>
+                        3. osoba B odpowiada imieniem - "chyba Adam"
+                        <br><br>
+                        4. osoba B rzuca monetą - jeśl wypada orzeł, to osoba B mówi pytanie głośno, jeśli wypada reszka, to nie mówi pytania.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="bottlePage">
+            <div id="bottleOutput">
+                <div id="pytanieButton" onclick="getRandomPytanie()">PYTANIE</div>
+                <div id="wyzwanieButton" onclick="getRandomWyzwanie()">WYZWANIE</div>
+                <textarea id="butelkaOutputArea"></textarea>
+            </div>
+        </div>
+
+
+
     </div>
 
 </body>
