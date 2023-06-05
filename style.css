@@ -262,7 +262,7 @@ body
 
 #bottlePage
 {
-    display: block;
+    display: none;
     border: 1px solid black;
     height: 800px;
 }
